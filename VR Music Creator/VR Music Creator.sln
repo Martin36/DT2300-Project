@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR Music Creator.CSharp.Plugins", "VR Music Creator.CSharp.Plugins.csproj", "{E781A3A1-28EB-D5F2-8A1B-61FBC045A304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR Music Creator.CSharp", "VR Music Creator.CSharp.csproj", "{03DDD0CC-1057-165D-B539-68F981B692B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR Music Creator.CSharp.Editor", "VR Music Creator.CSharp.Editor.csproj", "{10DF00F3-05DB-F9B0-3BE3-CB552D2920BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E781A3A1-28EB-D5F2-8A1B-61FBC045A304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E781A3A1-28EB-D5F2-8A1B-61FBC045A304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E781A3A1-28EB-D5F2-8A1B-61FBC045A304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E781A3A1-28EB-D5F2-8A1B-61FBC045A304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03DDD0CC-1057-165D-B539-68F981B692B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03DDD0CC-1057-165D-B539-68F981B692B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03DDD0CC-1057-165D-B539-68F981B692B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03DDD0CC-1057-165D-B539-68F981B692B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DF00F3-05DB-F9B0-3BE3-CB552D2920BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DF00F3-05DB-F9B0-3BE3-CB552D2920BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DF00F3-05DB-F9B0-3BE3-CB552D2920BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DF00F3-05DB-F9B0-3BE3-CB552D2920BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
