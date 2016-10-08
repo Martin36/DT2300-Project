@@ -3,7 +3,7 @@ using System.Collections;
 using UnityOSC;
 using System.Collections.Generic;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class SuperCollider : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

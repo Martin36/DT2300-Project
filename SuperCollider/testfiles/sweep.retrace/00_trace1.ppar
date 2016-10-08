@@ -1,0 +1,4 @@
+[ IdentityDictionary[ ('minrate' -> 20), ('target' -> 1), ('dist' -> 10), ('alignment' -> 0), ('hold' -> 90), 
+  ('minage' -> 0), ('maxrate' -> 50), ('graindur' -> 0.124), ('distexpon' -> 1), ('on' -> false), 
+  ('attack' -> 1), ('downsample' -> 1), ('decay' -> 1), ('maxspeed' -> 0.001), ('poly' -> 1), 
+  ('synth' -> 0), ('minspeedamp' -> 0.001), ('outputs' -> [ 0 ]), ('level' -> 0) ] ]
