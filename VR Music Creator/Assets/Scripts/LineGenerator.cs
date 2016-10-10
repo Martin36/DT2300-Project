@@ -15,20 +15,22 @@ public class LineGenerator : MonoBehaviour {
 
     private GameObject currentLine;
     private List<Vector3> points;
+    private SteamVR_TrackedController trackedController;
+    public GameObject controller;
 
 	// Use this for initialization
 	void Start () {
-	    
+        trackedController = controller.GetComponent<SteamVR_TrackedController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0) && lineStarted == false) {
+        if ((Input.GetMouseButtonDown(0) && !lineStarted) || (trackedController.triggerPressed && !lineStarted)) {
             lineStarted = true;
             StartLine();
         }
 
-        if (Input.GetMouseButtonDown(1) && lineStarted) {
+        if ((Input.GetMouseButtonDown(1) && lineStarted) || (trackedController.padPressed && lineStarted)) {
             lineStarted = false;
             EndLine();
         }
