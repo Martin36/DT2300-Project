@@ -5,17 +5,19 @@ using System.Collections.Generic;
 public class LineGenerator : MonoBehaviour {
 
     public GameObject target;
+    public GameObject controller;
     public Material material;
     public float lineWidth;
     public Vector3 a, b;
 
-    private int lineID, dynamicLineID, frames;
+    private int lineID;
     private bool lineStarted;
 
     private GameObject currentLine;
     private List<Vector3> points;
     private SteamVR_TrackedController trackedController;
-    public GameObject controller;
+    private LineRenderer lr;
+
 
 	// Use this for initialization
 	void Start () {
@@ -38,43 +40,32 @@ public class LineGenerator : MonoBehaviour {
 			
         if(lineStarted)
             AddPoint();
-            
-        frames++;
 
 	}
 
     private void StartLine() {
         // Create line and array of points
         currentLine = CreateLine();
-        LineRenderer lr = currentLine.GetComponent<LineRenderer>();
+        lr = currentLine.GetComponent<LineRenderer>();
+        lr.SetVertexCount(1);
 
-        // Create points array and add start point
+        // Create points array
         points = new List<Vector3>();
-        points.Add(target.transform.position);
-        //lr.SetPositions(points.ToArray());
 
         Debug.Log("Line started at " + target.transform.position.ToString());
     }
 
     private void EndLine() {
-        LineRenderer lr = currentLine.GetComponent<LineRenderer>();
-
-        points.Add(target.transform.position);
-
-        lr.SetVertexCount(points.Count);
-        lr.SetPositions(points.ToArray());
-
         Debug.Log("Line ended at " + target.transform.position.ToString());
     }
 
     private void AddPoint() {
         points.Add(target.transform.position);
-
+        lr.SetVertexCount(points.Count);
+        lr.SetPositions(points.ToArray());
         Debug.Log("Point added at " + target.transform.position.ToString());
 
     }
-
-
 
     public void GenerateLine() {
         GameObject go = CreateLine();
