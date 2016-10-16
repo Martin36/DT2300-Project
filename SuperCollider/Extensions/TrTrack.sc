@@ -273,7 +273,7 @@ TrTrack {
 TrTrackView : QView {
 	var track; // model
 	// trace-related views
-	var <vTrNameTF, vTrDeleteB, vTrIdST, vTrDurST, <vTrRecB, vTrRecChannelNB;
+	var <vTrNameTF, vTrDeleteB, vTrIdST, vTrDurST, <vTrRecB, <vTrRecChannelNB;
 	var <vTrRecTargetNB, <vTrRecOriginNB, vTrPlayB, <vTrTraceB, <vTrColorP, vTrVizB, vTrIncrementalB, vTrVelocityB;
 	// player-related views
 	var <vPlId, <vPlAddB, vPlDeleteB, <vPlTargetNB, <vPlOnB, <vPlDistNB;

@@ -250,7 +250,7 @@ TrSceneView : QScrollView {
 	// menu views
 	var vMSceneST, vMSaveB, vMSaveAsB, vMAddB, vMRevertB, <vMCloseB, vMMasterST, vMMuteB, vMMasterS;
 	// trace header views
-	var vTNameST, vTAddB, vTIdST, vTDurST, vTRecST, vTIncrementalST, vTSpeedST, vTInputST, vTTargetST, vTOriginST, vTPlayST, vTTraceST, vTDisplayST;
+	var vTNameST, <vTAddB, vTIdST, vTDurST, vTRecST, vTIncrementalST, vTSpeedST, vTInputST, vTTargetST, vTOriginST, vTPlayST, vTTraceST, vTDisplayST;
 	// player header views
 	var vPPlayerST, vPTargetST, vPOnST, vPDistST, vPPolyST, vPSynthST, vPOutputsST, vPLevelST;
 	// line views

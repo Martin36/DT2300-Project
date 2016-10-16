@@ -7,7 +7,6 @@ public class LineGenerator : MonoBehaviour {
     public GameObject target;
     public Material material;
     public float lineWidth;
-    public int pointAccuracy;
     public Vector3 a, b;
 
     private int lineID, dynamicLineID, frames;
@@ -20,27 +19,25 @@ public class LineGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        trackedController = controller.GetComponent<SteamVR_TrackedController>();
+        //trackedController = controller.GetComponent<SteamVR_TrackedController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if ((Input.GetMouseButtonDown(0) && !lineStarted) || (trackedController.triggerPressed && !lineStarted)) {
+		if ((Input.GetMouseButtonDown(0) && !lineStarted)) {//|| (trackedController.triggerPressed && !lineStarted)) {
             lineStarted = true;
+			GetComponent<SuperCollider> ().StartRecording ();
             StartLine();
         }
 
-        if ((Input.GetMouseButtonDown(1) && lineStarted) || (trackedController.padPressed && lineStarted)) {
+		if ((Input.GetMouseButtonDown(1) && lineStarted)) {// || (trackedController.padPressed && lineStarted)) {
             lineStarted = false;
+			GetComponent<SuperCollider> ().StopRecording ();
             EndLine();
         }
-
-        if (frames == pointAccuracy) {
-            frames = 0;
-
-            if(lineStarted)
-                AddPoint();
-        }
+			
+        if(lineStarted)
+            AddPoint();
             
         frames++;
 

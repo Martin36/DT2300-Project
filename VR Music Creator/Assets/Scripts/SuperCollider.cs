@@ -31,4 +31,12 @@ public class SuperCollider : MonoBehaviour {
 
         OSCHandler.Instance.SendMessageToClient("SuperCollider", "/RigidBody", vecArray);
     }
+
+	public void StartRecording() {
+		OSCHandler.Instance.SendMessageToClient ("SuperCollider", "/Startrec", 1);
+	}
+
+	public void StopRecording() {
+		OSCHandler.Instance.SendMessageToClient ("SuperCollider", "/Startrec", 0);
+	}
 }
